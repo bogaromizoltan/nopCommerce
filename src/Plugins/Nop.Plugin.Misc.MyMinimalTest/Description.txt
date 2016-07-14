@@ -1,0 +1,8 @@
+﻿Group: Misc
+FriendlyName: MyMinimalTest
+SystemName: Misc.MyMinimalTest
+Version: 1.20
+SupportedVersions: 3.80
+Author: AutSoftDevs
+DisplayOrder: 1
+FileName: Nop.Plugin.Misc.MyMinimalTest.dll
