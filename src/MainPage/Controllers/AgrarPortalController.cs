@@ -15,8 +15,7 @@ namespace MainPage.Controllers
         // GET: AgrarPortal
         public ActionResult Index()
         {
-            //int myid = _workContext.CurrentCustomer.Id;
-            ViewBag.myid = 12;
+            ViewBag.myid = _workContext.CurrentCustomer.Id;
             return View();
         }
     }

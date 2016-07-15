@@ -4,7 +4,7 @@
     <ul>
         @Html.Widget("header_links_before")
 
-        <li><a href="Plugins/MyPortal/Index">Plugins</a></li>
+        <li><a href="Plugins/MyPortal/Index">@T("Plugins.Extension.MyPortal.Label")</a></li>
 
         @if (Model.IsAuthenticated)
         {
