@@ -11,8 +11,8 @@ namespace Nop.Plugin.Misc.MyMinimalTest.Infrastructure
     {
         public CustomViewEngine()
         {
-            ViewLocationFormats = new[] { "~/Plugins/Extension.MyPortal/Views/{0}.cshtml" };
-            PartialViewLocationFormats = new[] { "~/Plugins/Extension.MyPortal/Views/{0}.cshtml" };
+            ViewLocationFormats = new[] { "~/Plugins/Misc.MyMinimalTest/Views/{0}.cshtml" };
+            PartialViewLocationFormats = new[] { "~/Plugins/Misc.MyMinimalTest/Views/{0}.cshtml" };
         }
     }
 }

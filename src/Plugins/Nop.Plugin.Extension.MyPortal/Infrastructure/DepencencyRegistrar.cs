@@ -22,6 +22,7 @@ namespace Nop.Plugin.Extension.MyPortal.Infrastructure
 
         public virtual void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config)
         {
+            //loghoz kéne ha lenne
             //builder.RegisterType<MyPortalRecordObjectContext>().As<IViewTrackingService>().InstancePerLifetimeScope();
 
             //data context

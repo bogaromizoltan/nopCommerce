@@ -23,11 +23,11 @@ namespace Nop.Plugin.Misc.MyMinimalTest
         public void RegisterRoutes(RouteCollection routes)
         {
             routes.MapRoute("Plugin.Misc.MyMinimalTest.Index", 
-                "Plugins/MyMinimalTest/Index",
-                new { controller = "MyMinimalTest", action = "Index" },
+                "Plugins/Test/Index",
+                new { controller = "Test", action = "Index" },
                 new[] { "Nop.Plugin.Misc.MyMinimalTest.Controllers" });
 
-            //ViewEngines.Engines.Add(new CustomViewEngine());
+            ViewEngines.Engines.Add(new CustomViewEngine());
         }
     }
 }

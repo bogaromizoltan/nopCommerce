@@ -12,10 +12,12 @@ namespace Nop.Plugin.Extension.MyPortal.Data
     {
         public MyPortalRecordMap()
         {
-            //mapping...
-            //Totable
-            //haskey
-            //property
+            ToTable("Parcels");
+            HasKey(p => p.Id);
+            Property(p => p.ParcelNumber);
+            Property(p => p.Size);
+            //HasRequired(p => p.Customer).WithOptional(t => t.Parcels);
+            //FIGYELEM BELE KELL MÓKOLNI AZ EREDETI CUCCBA A FOREIGN KEY MIATT
         }
     }
 }

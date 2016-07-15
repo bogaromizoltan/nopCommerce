@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Nop.Plugin.Api.Oder")]
+[assembly: AssemblyTitle("Nop.Plugins.Extension.MyPortal")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Nop.Plugin.Api.Oder")]
+[assembly: AssemblyProduct("Nop.Plugins.Extension.MyPortal")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("226ed207-93bf-4057-b01e-df6071e8b00f")]
+[assembly: Guid("3640a4e6-f463-4fcc-b652-11713efcd5c8")]
 
 // Version information for an assembly consists of the following four values:
 //

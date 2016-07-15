@@ -41,10 +41,5 @@ namespace Nop.Plugin.Extension.MyPortal
             _context.Uninstall();
             base.Uninstall();
         }
-
-        public Web.Framework.Menu.SiteMapNode BuildMenuItem()
-        {
-            return null; //TOdO BLAVLAJSFdilhasdilgh
-        }
     }
 }

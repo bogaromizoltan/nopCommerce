@@ -1,8 +1,0 @@
-﻿Group: API
-FriendlyName: Order Notification
-SystemName: Api.Order
-Version: 1.0
-SupportedVersions: 3.80
-Author: AutSoftDevs
-DisplayOrder: 1
-FileName: Nop.Plugin.Api.Order.dll

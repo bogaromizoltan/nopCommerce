@@ -46,9 +46,9 @@ namespace Nop.Plugin.Extension.MyPortal.Data
 
         public void Uninstall()
         {
-            //var dbScript = "DROP TABLE ProductViewTracking";
-            //Database.ExecuteSqlCommand(dbScript);
-            //SaveChanges();
+            var dbScript = "DROP TABLE Parcels";
+            Database.ExecuteSqlCommand(dbScript);
+            SaveChanges();
         }
 
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
