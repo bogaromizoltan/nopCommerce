@@ -16,17 +16,18 @@ namespace Nop.Plugin.Misc.MyMinimalTest
         {
             get
             {
-                return 1;
+                return 0;
             }
         }
 
         public void RegisterRoutes(RouteCollection routes)
         {
-            routes.MapRoute("Plugin.Misc.MyMinimalTest", "MyMinimalTest/Index",
+            routes.MapRoute("Plugin.Misc.MyMinimalTest.Index", 
+                "Plugins/MyMinimalTest/Index",
                 new { controller = "MyMinimalTest", action = "Index" },
-                new[] { "Nop.Plugin.Misc.MyMinimalTest" });
+                new[] { "Nop.Plugin.Misc.MyMinimalTest.Controllers" });
 
-            ViewEngines.Engines.Insert(0, new CustomViewEngine());
+            ViewEngines.Engines.Add(new CustomViewEngine());
         }
     }
 }

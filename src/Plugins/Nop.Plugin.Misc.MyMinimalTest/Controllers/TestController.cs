@@ -12,7 +12,7 @@ namespace Nop.Plugin.Misc.MyMinimalTest.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("~/Plugins/Misc.MyMinimalTest/Views/Index.cshtml");
         }
     }
 }

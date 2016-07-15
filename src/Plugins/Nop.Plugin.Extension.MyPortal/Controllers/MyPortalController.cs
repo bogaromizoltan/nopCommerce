@@ -21,7 +21,7 @@ namespace Nop.Plugin.Extension.MyPortal.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View("~/Plugins/Extension.MyPortal/Views/Index.cshtml");
         }
     }
 }

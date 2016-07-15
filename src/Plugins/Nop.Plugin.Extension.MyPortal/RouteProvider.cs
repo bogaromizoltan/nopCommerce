@@ -15,18 +15,18 @@ namespace Nop.Plugin.Extension.MyPortal
         {
             get
             {
-                throw new NotImplementedException();
+                return 0;
             }
         }
 
         public void RegisterRoutes(System.Web.Routing.RouteCollection routes)
         {
-            routes.MapRoute("Nop.Plugin.Extension.MyPortal.Index",
-                "MyPortal/Index",
+            routes.MapRoute("Plugin.Extension.MyPortal.Index",
+                "Plugins/MyPortal/Index",
                 new { controller = "MyPortal", action = "Index" },
                 new[] { "Nop.Plugin.Extension.MyPortal.Controllers" });
 
-            ViewEngines.Engines.Insert(0, new MyPortalViewEngine());
+            ViewEngines.Engines.Add(new MyPortalViewEngine());
         }
     }
 }
