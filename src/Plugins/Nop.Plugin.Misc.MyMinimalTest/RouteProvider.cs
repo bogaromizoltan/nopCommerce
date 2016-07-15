@@ -27,7 +27,7 @@ namespace Nop.Plugin.Misc.MyMinimalTest
                 new { controller = "MyMinimalTest", action = "Index" },
                 new[] { "Nop.Plugin.Misc.MyMinimalTest.Controllers" });
 
-            ViewEngines.Engines.Add(new CustomViewEngine());
+            //ViewEngines.Engines.Add(new CustomViewEngine());
         }
     }
 }

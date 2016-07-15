@@ -26,7 +26,7 @@ namespace Nop.Plugin.Extension.MyPortal
                 new { controller = "MyPortal", action = "Index" },
                 new[] { "Nop.Plugin.Extension.MyPortal.Controllers" });
 
-            ViewEngines.Engines.Add(new MyPortalViewEngine());
+            //ViewEngines.Engines.Add(new MyPortalViewEngine());
         }
     }
 }
