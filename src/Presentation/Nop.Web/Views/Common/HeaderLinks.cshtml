@@ -3,6 +3,9 @@
 <div class="header-links">
     <ul>
         @Html.Widget("header_links_before")
+
+        <li><a href="Plugins/MyPortal/Index">Plugins</a></li>
+
         @if (Model.IsAuthenticated)
         {
             <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account">@Model.CustomerEmailUsername</a></li>
