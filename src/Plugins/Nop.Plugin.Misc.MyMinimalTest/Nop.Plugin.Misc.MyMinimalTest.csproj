@@ -62,11 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\TestApiController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Infrastructure\CustomViewEngine.cs" />
     <Compile Include="Infrastructure\DependencyRegistrar.cs" />
     <Compile Include="MyMinimalTestPlugin.cs" />
+    <Compile Include="OrderPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteProvider.cs" />
   </ItemGroup>

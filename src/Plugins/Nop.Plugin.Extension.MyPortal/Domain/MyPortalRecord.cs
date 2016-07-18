@@ -11,8 +11,8 @@ namespace Nop.Plugin.Extension.MyPortal.Domain
     public class MyPortalRecord : BaseEntity
     {
         //ITT ADATBÁZIS CUCC
-        public string ParcelNumber { get; set; }
-        public decimal Size { get; set; }
+        public virtual string ParcelNumber { get; set; }
+        public virtual decimal Size { get; set; }
 
         //public Customer Customer { get; set; }
     }
