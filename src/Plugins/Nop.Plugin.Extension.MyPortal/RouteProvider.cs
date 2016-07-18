@@ -26,6 +26,11 @@ namespace Nop.Plugin.Extension.MyPortal
                 new { controller = "MyPortal", action = "Index" },
                 new[] { "Nop.Plugin.Extension.MyPortal.Controllers" });
 
+            routes.MapRoute("Plugin.Extension.MyPortal.Create",
+                "Plugins/MyPortal/Create",
+                new { controller = "MyPortal", action = "Create" },
+                new[] { "Nop.Plugin.Extension.MyPortal.Controllers" });
+
             ViewEngines.Engines.Add(new MyPortalViewEngine());
         }
     }

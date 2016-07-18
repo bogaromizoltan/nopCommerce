@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Nop.Core.Configuration;
 using Nop.Web.Framework.Mvc;
+using Nop.Plugin.Extension.MyPortal.Service;
 
 namespace Nop.Plugin.Extension.MyPortal.Infrastructure
 {
@@ -23,17 +24,19 @@ namespace Nop.Plugin.Extension.MyPortal.Infrastructure
         public virtual void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config)
         {
             //loghoz kéne ha lenne
-            //builder.RegisterType<MyPortalRecordObjectContext>().As<IViewTrackingService>().InstancePerLifetimeScope();
+            //builder.RegisterType<ParcelRecordObjectContext>().As<IViewTrackingService>().InstancePerLifetimeScope();
 
             //data context
             
-            DependencyRegistrarExtensions.RegisterPluginDataContext<MyPortalRecordObjectContext>(this, builder, CONTEXT_NAME);
+            DependencyRegistrarExtensions.RegisterPluginDataContext<ParcelRecordObjectContext>(this, builder, CONTEXT_NAME);
 
             //override required repository with our custom context
-            builder.RegisterType<EfRepository<MyPortalRecord>>()
-                .As<IRepository<MyPortalRecord>>()
+            builder.RegisterType<EfRepository<ParcelRecord>>()
+                .As<IRepository<ParcelRecord>>()
                 .WithParameter(ResolvedParameter.ForNamed<IDbContext>(CONTEXT_NAME))
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<ParcelService>().As<IParcelService>().InstancePerLifetimeScope();
         }
 
         public int Order

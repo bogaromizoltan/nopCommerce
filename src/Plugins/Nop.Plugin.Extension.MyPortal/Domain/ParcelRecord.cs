@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace Nop.Plugin.Extension.MyPortal.Domain
 {
-    public class MyPortalRecord : BaseEntity
+    public class ParcelRecord : BaseEntity
     {
         //ITT ADATBÁZIS CUCC
         public virtual string ParcelNumber { get; set; }
         public virtual decimal Size { get; set; }
 
-        //public Customer Customer { get; set; }
+        public virtual int CustomerId { get; set; }
+
+        //public virtual Customer Customer { get; set; }
     }
 }

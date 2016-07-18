@@ -1,9 +1,51 @@
-﻿@{ 
+﻿@using Nop.Web.Framework;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@model IEnumerable<Nop.Plugin.Extension.MyPortal.Models.ParcelModel>
+@{ 
+    ViewBag.Title = "Parcels";
     Layout = "_Root.cshtml";
 }
 
-<h1>Üdvözöljük...</h1>
+<h1>@T("Plugins.Extension.MyPortal.Label")</h1>
 
-<p>@ViewBag.myid</p>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    @*@Html.NopLabelFor(model => model.ParcelNumber)*@
+                    Parcel number
+                </td>
+                <td>
+                    @*@Html.NopLabelFor(model => model.Size)*@
+                    Size
+                </td>
+                <td>
+                    <!--Edit/delete-->
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var modelItem in @Model)
+            {
+                <tr>
+                    <td>
+                        @modelItem.ParcelNumber
+                    </td>
+                    <td>
+                        @modelItem.Size
+                    </td>
+                    <td>
+                        Edit | Delete
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            @Html.ActionLink(T("Plugins.Extension.MyPortal.CreateNew").ToString(), "Create", "MyPortal")
+            @*<a href="~/Plugins/"></a>*@
+        </tfoot>
+    </table>
+</div>
 
-<p>@ViewBag.name</p>

@@ -65,12 +65,15 @@
     <Compile Include="Controllers\MyPortalController.cs" />
     <Compile Include="Data\MyPortalRecordMap.cs" />
     <Compile Include="Data\MyPortalRecordObjectContext.cs" />
-    <Compile Include="Domain\MyPortalRecord.cs" />
+    <Compile Include="Domain\ParcelRecord.cs" />
     <Compile Include="Infrastructure\DepencencyRegistrar.cs" />
     <Compile Include="Infrastructure\MyPortalViewEngine.cs" />
+    <Compile Include="Models\ParcelModel.cs" />
     <Compile Include="MyPortalPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteProvider.cs" />
+    <Compile Include="Service\IParcelService.cs" />
+    <Compile Include="Service\ParcelService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Description.txt">
@@ -115,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="Views\Create.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

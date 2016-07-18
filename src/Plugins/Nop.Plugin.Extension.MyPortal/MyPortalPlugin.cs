@@ -13,10 +13,10 @@ namespace Nop.Plugin.Extension.MyPortal
 {
     public class MyPortalPlugin : BasePlugin
     {
-        private MyPortalRecordObjectContext _context;
-        private IRepository<MyPortalRecord> _repo;
+        private ParcelRecordObjectContext _context;
+        private IRepository<ParcelRecord> _repo;
 
-        public MyPortalPlugin(MyPortalRecordObjectContext context, IRepository<MyPortalRecord> repo)
+        public MyPortalPlugin(ParcelRecordObjectContext context, IRepository<ParcelRecord> repo)
         {
             _context = context;
             _repo = repo;
@@ -29,8 +29,14 @@ namespace Nop.Plugin.Extension.MyPortal
 
         public override void Install()
         {
-            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Label", "My site", "en-US");
-            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Label", "My site", "hu-HU");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Label", "My parcels", "en-US");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Label", "Földjeim", "hu-HU");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Models.ParcelModel.ParcelNumber", "Parcel number", "en-US");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Models.ParcelModel.ParcelNumber", "Helyrajzi szám", "hu-HU");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Models.ParcelModel.Size", "Size", "en-US");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.Models.ParcelModel.Size", "Méret", "hu-HU");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.CreateNew", "Create new", "en-US");
+            this.AddOrUpdatePluginLocaleResource("Plugins.Extension.MyPortal.CreateNew", "Új megadása", "hu-HU");
             _context.Install();
             base.Install();
         }

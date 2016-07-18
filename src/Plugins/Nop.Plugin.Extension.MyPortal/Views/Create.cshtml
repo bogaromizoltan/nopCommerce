@@ -1,0 +1,36 @@
+﻿@using Nop.Web.Framework;
+@model Nop.Plugin.Extension.MyPortal.Models.ParcelModel
+@{
+    ViewBag.Title = "New parcel";
+    Layout = "_Root.cshtml";
+}
+
+@*<script src="../../../Scripts/kendo/2014.1.318/kendo.numerictextbox.min.js"></script>*@
+
+<!-- type="text/javascript">-->
+@*<script>
+        $(document).ready(function () {
+            $("#parcelsize").kendoNumericTextBox({
+                min: 0
+            });
+        });
+    </script>*@
+
+@*<input id="parcelsize" value="0" />*@
+
+@using (Html.BeginForm("Create", "MyPortal"))
+{
+    <div>
+        <div>
+            @Html.NopLabelFor(model => model.ParcelNumber)
+            @Html.TextBoxFor(model => model.ParcelNumber, new { id = "parcelnumber" })
+        </div>
+        <div>
+            @Html.NopLabelFor(model => model.Size)
+            @Html.TextBoxFor(model => model.Size, new { id = "parcelsize" })
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="btn btn-success btn-sm" />
+        </div>
+    </div>
+}

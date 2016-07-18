@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace Nop.Plugin.Extension.MyPortal.Data
 {
-    public class MyPortalRecordMap : EntityTypeConfiguration<MyPortalRecord>
+    public class ParcelRecordMap : EntityTypeConfiguration<ParcelRecord>
     {
-        public MyPortalRecordMap()
+        public ParcelRecordMap()
         {
             ToTable("Parcels");
             HasKey(p => p.Id);
             Property(p => p.ParcelNumber);
             Property(p => p.Size);
-            //HasRequired(p => p.Customer).WithOptional(t => t.Parcels);
-            //FIGYELEM BELE KELL MÓKOLNI AZ EREDETI CUCCBA A FOREIGN KEY MIATT
+            
+            //HasRequired(p => p.Customer).WithMany().HasForeignKey(p => p.CustomerId);
         }
     }
 }

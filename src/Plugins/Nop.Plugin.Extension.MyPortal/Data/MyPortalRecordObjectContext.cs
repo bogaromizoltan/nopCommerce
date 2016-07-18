@@ -7,16 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Nop.Core;
 using System.Data.Entity.Infrastructure;
+using Nop.Core.Domain.Customers;
 
 namespace Nop.Plugin.Extension.MyPortal.Data
 {
-    public class MyPortalRecordObjectContext : DbContext, IDbContext
+    public class ParcelRecordObjectContext : DbContext, IDbContext
     {
         public bool ProxyCreationEnabled { get; set; }
 
         public bool AutoDetectChangesEnabled { get; set; }
 
-        public MyPortalRecordObjectContext(string nameOrConnectionString) : base(nameOrConnectionString) { }
+        public ParcelRecordObjectContext(string nameOrConnectionString) : base(nameOrConnectionString) { }
 
         #region Implementation of IDbContext
 
@@ -24,7 +25,7 @@ namespace Nop.Plugin.Extension.MyPortal.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new MyPortalRecordMap());
+            modelBuilder.Configurations.Add(new ParcelRecordMap());
 
             base.OnModelCreating(modelBuilder);
         }
@@ -38,7 +39,7 @@ namespace Nop.Plugin.Extension.MyPortal.Data
         {
             //It's required to set initializer to null (for SQL Server Compact).
             //otherwise, you'll get something like "The model backing the 'your context name' context has changed since the database was created. Consider using Code First Migrations to update the database"
-            Database.SetInitializer<MyPortalRecordObjectContext>(null);
+            Database.SetInitializer<ParcelRecordObjectContext>(null);
 
             Database.ExecuteSqlCommand(CreateDatabaseInstallationScript());
             SaveChanges();
