@@ -31,9 +31,9 @@ namespace Nop.Plugin.Misc.MyMinimalTest
                 // HTTP POST
                 var gizmo = new
                 {
-                    Username = "ÚZER",
+                    Username = eventMessage.Order.Customer.Username,
                     OrderItems = orderedItems,
-                    Price = (decimal)12
+                    Price = eventMessage.Order.OrderTotal
                 };
                 var task = client.PostAsJsonAsync("api/Values", gizmo);
                 task.ConfigureAwait(false);
