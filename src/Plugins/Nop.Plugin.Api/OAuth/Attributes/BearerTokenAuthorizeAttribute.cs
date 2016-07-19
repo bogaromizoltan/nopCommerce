@@ -46,6 +46,7 @@ namespace Nop.Plugin.Api.Attributes
                 ##     ## ##     ## ##    ## ##   ##  
                 ##     ## ##     ##  ######  ##    ## 
                 
+                --> most bárki le tud kérdezni mindenféle adatot...
             
                 */
             }
